@@ -7,15 +7,9 @@
 #### 快速使用
 
 ```js
-import Vue from ''
+import Vue from 'vue'
 import config from 'suwis-vue-config'
 Vue.use(config, options)
-{
-  // 配置文件路径
-  file: '/config.js',
-  // 默认使用的配置环境
-  default: 'dev'
-}
 ```
 
 #### options
