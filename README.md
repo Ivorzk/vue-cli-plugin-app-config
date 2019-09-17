@@ -102,3 +102,33 @@ yarn serve --prod
 ```js
 yarn serve --xxx
 ```
+
+#### 项目中使用配置内容
+
+使用本插件以后，会在项目全局生成一个 `$config` 对象，可在任意js文件中通过 `$config` 直接获取配置内容
+
+> 示例
+
+```js
+<template lang="html">
+  <div>
+    apihost: {{$config.apihost}}
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      $config
+    }
+  },
+  mounted() {
+    console.log('全局项目配置', $config)
+  }
+}
+</script>
+
+<style lang="css" scoped>
+</style>
+```
