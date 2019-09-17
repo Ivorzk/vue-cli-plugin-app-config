@@ -1,4 +1,4 @@
-### suwis-vue-config
+### vue-cli-plugin-app-config
 
 #### 介绍
 
@@ -6,13 +6,38 @@
 
 #### 快速使用
 
-```js
-import Vue from 'vue'
-import config from 'suwis-vue-config'
-Vue.use(config, options)
+> 添加插件
+
+```sh
+yarn add vue-cli-plugin-app-config
+
+// 或者
+
+npm i vue-cli-plugin-app-config --save-dev
 ```
 
-#### options
+> 应用插件到项目中
+
+```sh
+vue add vue-cli-plugin-app-config
+```
+
+> 配置插件 vue.config.js
+
+```js
+{
+   ...other config
+   pluginOptions: {
+      // options
+      'app-config': {
+        file: './app.config.js',
+        default: 'dev'
+      }
+   }
+}
+```
+
+#### 插件配置项 options
 
 | 配置项     | 默认值            | 描述        |
 | :------ | :------------- | :-------- |
