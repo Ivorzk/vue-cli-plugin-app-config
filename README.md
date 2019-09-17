@@ -109,7 +109,7 @@ yarn serve --xxx
 
 > 示例
 
-```js
+```html
 <template lang="html">
   <div>
     apihost: {{$config.apihost}}
