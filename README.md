@@ -120,6 +120,7 @@ yarn serve --xxx
 export default {
   data() {
     return {
+      // 注入到当前组件
       $config
     }
   },
