@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/Ivorzk/suwis-vue-config.git"
+    "url": "https://gitee.com/Ivorzk/vue-cli-plugin-app-config.git"
   },
   "keywords": [
     "vue",

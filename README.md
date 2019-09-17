@@ -44,7 +44,7 @@ vue add vue-cli-plugin-app-config
 | file    | /app.config.js | 配置文件路径    |
 | default | dev            | 默认使用的配置环境 |
 
-#### config 配置文件结构示例
+#### app.config.js 配置文件结构示例
 
 ```js
 export default {
