@@ -47,7 +47,7 @@ vue add vue-cli-plugin-app-config
 #### app.config.js 配置文件结构示例
 
 ```js
-export default {
+module.exports = {
   // 不同环境环境配置
   env: {
     // 开发环境
@@ -151,7 +151,7 @@ yarn build --xxx
 ```html
 <template lang="html">
   <div>
-    apihost: {{$config.apihost}}
+    apihost: {{config.apihost}}
   </div>
 </template>
 
@@ -160,7 +160,7 @@ export default {
   data() {
     return {
       // 注入到当前组件
-      $config
+      config: $config
     }
   },
   mounted() {
