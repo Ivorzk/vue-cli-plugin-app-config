@@ -1,8 +1,3 @@
-<style>
-.markdown blockquote p {
-  margin: 0;
-}
-</style>
 ### vue-cli-plugin-app-config
 
 #### 介绍
