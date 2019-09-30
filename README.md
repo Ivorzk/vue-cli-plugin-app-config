@@ -25,7 +25,7 @@ vue add vue-cli-plugin-app-config
 > 配置插件 vue.config.js
 
 ```js
-{
+module.exports = {
    ...other config
    pluginOptions: {
       // options

@@ -1,7 +1,18 @@
 var path = require('path')
 var webpack = require('webpack')
 
+// 默认配置
+var $defaultConfig = {
+  env: {
+    dev: {}
+  },
+  common: {}
+}
+
 module.exports = (api, options) => {
+
+  // 容错处理
+  options.pluginOptions ? '' : options.pluginOptions = {}
 
   // 混入配置文件
   let mergeConfig = (args) => {
@@ -13,7 +24,10 @@ module.exports = (api, options) => {
     }
 
     // 获取配置文件
-    let $allConfig = require(path.resolve(pluginOptions.file))
+    let $allConfig = require(path.resolve(pluginOptions.file)) || {}
+
+    // 合并默认配置
+    $allConfig = Object.assign($defaultConfig, $allConfig)
 
     // 获取环境, 使用插件默认配置 or dev
     let envtype = pluginOptions.default || 'dev'
