@@ -1,3 +1,5 @@
+[中文](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_zh) | [English](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_en)
+
 ### vue-cli-plugin-app-config
 
 #### 介绍
