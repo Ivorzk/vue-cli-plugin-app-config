@@ -174,3 +174,20 @@ export default {
 <style lang="css" scoped>
 </style>
 ```
+
+
+#### Matters needing attention
+
+Plug-in injected $config, strong in open eslint calibration environment, complains, need to configure the eslint rules
+Modify the app. Config. Need to restart the project after js, variable to take effect
+
+> Configuration in the project root directory. Eslintrc. Js (if there is no this file, create a new)
+
+```js
+module.exports = {
+  globals: {
+    $config: true
+  },
+  ...
+}
+```
