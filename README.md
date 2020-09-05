@@ -1,4 +1,4 @@
-[中文](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_zh) | [English](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_en)
+[中文](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_zh) \| [English](https://github.com/Ivorzk/vue-cli-plugin-app-config/wiki/doc_en)
 
 ### vue-cli-plugin-app-config
 
@@ -41,10 +41,10 @@ module.exports = {
 
 #### 插件配置项 options
 
-| 配置项     | 默认值            | 描述        |
-| :------ | :------------- | :-------- |
-| file    | ./app.config.js | 配置文件路径,默认为项目根目录，和 vue.config.js 同级    |
-| default | dev            | 默认使用的配置环境 |
+| 配置项     | 默认值             | 描述                                 |
+| :------ | :-------------- | :--------------------------------- |
+| file    | ./app.config.js | 配置文件路径,默认为项目根目录，和 vue.config.js 同级 |
+| default | dev             | 默认使用的配置环境                          |
 
 #### app.config.js 配置文件结构示例
 
@@ -137,16 +137,14 @@ yarn build --xxx
 
 > 上文中的配置文件，以dev环境启动为例，最终得到的 $config 文件如下
 
-```
-// $config
-{
-  apihost: 'http://local.api.com',
-  // 接口超时时间
-  timeout: 5000,
-  // 主题配置
-  theme: 'red'
-}
-```
+    // $config
+    {
+      apihost: 'http://local.api.com',
+      // 接口超时时间
+      timeout: 5000,
+      // 主题配置
+      theme: 'red'
+    }
 
 > 示例
 
@@ -173,4 +171,20 @@ export default {
 
 <style lang="css" scoped>
 </style>
+```
+
+#### 注意事项
+
+插件注入的$config,在开启eslint强校验的环境，会报错，需要配置一下eslint规则
+修改 app.config.js 以后需要重启项目，变量才能生效
+
+> 配置项目根目录中的 .eslintrc.js (如果没有此文件，可新建一个)
+
+```js
+module.exports = {
+  globals: {
+    $config: true
+  },
+  ...
+}
 ```
