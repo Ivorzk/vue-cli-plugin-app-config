@@ -20,7 +20,8 @@ module.exports = (api, options) => {
     // 获取插件配置
     let pluginOptions = options.pluginOptions['app-config'] || {
       file: './app.config.js',
-      default: 'dev'
+      default: 'dev',
+      outputprefix: 'dist'
     }
 
     // 获取配置文件
