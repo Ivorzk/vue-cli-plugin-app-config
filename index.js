@@ -68,7 +68,8 @@ module.exports = (api, options) => {
   let argv = []
 
   // 过滤保留--前缀的参数
-  for (let arg of process.argv) {
+  let npm_config_argv = JSON.parse(process.env.npm_config_argv)
+  for (let arg of npm_config_argv.original) {
     if (arg.indexOf('--') >= 0) argv.push(arg)
   }
 
