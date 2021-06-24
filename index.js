@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var package = require('./package.json')
 
 // 默认配置
 var $defaultConfig = {
@@ -47,6 +48,8 @@ module.exports = (api, options) => {
       // 混入当前环境配置
       ...$allConfig.env[envtype] || {}
     }
+
+    if (pluginOptions.includePackage) $config.package = package
 
     // 混入全局的webpack中
     api.configureWebpack(webpackConfig => {

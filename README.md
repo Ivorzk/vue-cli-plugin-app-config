@@ -33,7 +33,8 @@ module.exports = {
       // options
       'app-config': {
         file: './app.config.js',
-        default: 'dev'
+        default: 'dev',
+        includePackage: true
       }
    }
 }
@@ -41,10 +42,11 @@ module.exports = {
 
 #### 插件配置项 options
 
-| 配置项     | 默认值             | 描述                                 |
-| :------ | :-------------- | :--------------------------------- |
-| file    | ./app.config.js | 配置文件路径,默认为项目根目录，和 vue.config.js 同级 |
-| default | dev             | 默认使用的配置环境                          |
+| 配置项            | 默认值             | 描述                                                                       |
+| :------------- | :-------------- | :----------------------------------------------------------------------- |
+| file           | ./app.config.js | 配置文件路径,默认为项目根目录，和 vue.config.js 同级                                       |
+| default        | dev             | 默认使用的配置环境                                                                |
+| includePackage | false           | 有些时候我们需要获取当前程序的版本,而package.json里面自带版本号, 使用此配置可以将package.json中的数据导入到配置文件中 |
 
 #### app.config.js 配置文件结构示例
 
