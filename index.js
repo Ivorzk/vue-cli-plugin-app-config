@@ -46,7 +46,9 @@ module.exports = (api, options) => {
       // 混入通用的配置
       ...$allConfig.common || {},
       // 混入当前环境配置
-      ...$allConfig.env[envtype] || {}
+      ...$allConfig.env[envtype] || {},
+      // 注入当前环境标识
+      env: envtype
     }
 
     if (pluginOptions.includePackage) $config.package = package
