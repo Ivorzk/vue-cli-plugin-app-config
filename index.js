@@ -1,6 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var package = require('./package.json')
 
 // 默认配置
 var $defaultConfig = {
@@ -51,7 +50,14 @@ module.exports = (api, options) => {
       env: envtype
     }
 
-    if (pluginOptions.includePackage) $config.package = package
+    try {
+      if (pluginOptions.includePackage) {
+        var package = require(path.resolve('./package.json'))
+        $config.package = package || {
+          error: 'package.json not find'
+        }
+      }
+    } catch (e) {}
 
     // 混入全局的webpack中
     api.configureWebpack(webpackConfig => {
