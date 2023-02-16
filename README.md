@@ -13,7 +13,7 @@
 ```sh
 yarn add vue-cli-plugin-app-config
 
-// 或者
+// or
 
 npm i vue-cli-plugin-app-config --save-dev
 ```
@@ -79,58 +79,90 @@ module.exports = {
 }
 ```
 
-#### 使用不同的环境启动项目(以yarn为例)
+#### 使用不同的环境启动项目
 
 > 开发环境
 
 ```js
 // 默认 dev环境，所以可加可不加
 yarn serve --dev
+
+// or
+
+npm run serve -- --dev
 ```
 
 > 测试环境
 
 ```js
 yarn serve --test
+
+// or
+
+npm run serve -- --test
 ```
 
 > 正式环境
 
 ```js
 yarn serve --prod
+
+// or
+
+npm run serve -- --prod
 ```
 
 > 用户自定义环境
 
 ```js
 yarn serve --xxx
+
+// or
+
+npm run serve -- --xxx
 ```
 
-#### 使用不同的环境编译项目(以yarn为例)
+#### 使用不同的环境编译项目
 
 > 开发环境
 
 ```js
 // 默认 dev环境，所以可加可不加
 yarn build --dev
+
+// or
+
+npm run build -- --dev
 ```
 
 > 测试环境
 
 ```js
 yarn build --test
+
+// or
+
+npm run build -- --test
 ```
 
 > 正式环境
 
 ```js
 yarn build --prod
+
+// or
+
+npm run build -- --prod
 ```
 
 > 用户自定义环境
 
 ```js
 yarn build --xxx
+
+// or
+
+npm run build -- --xxx
 ```
 
 #### 项目中使用配置内容
