@@ -45,6 +45,7 @@ module.exports = {
 | :------ | :------------- | :-------- |
 | file    | ./app.config.js | The configuration file path, which defaults to the project root directory, is at the same level as vue.config.js    |
 | default | dev            | The configuration environment used by default |
+| includePackage | false            | Sometimes we need to get the version of the current program, and package.json has its own version number. Use this configuration to import the data in package.json into the configuration file |
 
 #### app.config.js Sample configuration file structure
 
@@ -84,24 +85,40 @@ module.exports = {
 ```js
 // Default dev environment, so can be added or not added
 yarn serve --dev
+
+// or
+
+npm run serve -- --dev
 ```
 
 > The test environment
 
 ```js
 yarn serve --test
+
+// or
+
+npm run serve -- --test
 ```
 
 > Production environment
 
 ```js
 yarn serve --prod
+
+// or
+
+npm run serve -- --prod
 ```
 
 > User - defined environment
 
 ```js
 yarn serve --xxx
+
+// or
+
+npm run serve -- --xxx
 ```
 
 #### Compile the project using a different environment (in the case of yarn)
@@ -111,24 +128,40 @@ yarn serve --xxx
 ```js
 // Default dev environment, so can be added or not added
 yarn build --dev
+
+// or
+
+npm run build -- --dev
 ```
 
 > The test environment
 
 ```js
 yarn build --test
+
+// or
+
+npm run build -- --test
 ```
 
 > Production environment
 
 ```js
 yarn build --prod
+
+// or
+
+npm run build -- --prod
 ```
 
 > User - defined environment
 
 ```js
 yarn build --xxx
+
+// or
+
+npm run build -- --xxx
 ```
 
 #### Use configuration content in your project
